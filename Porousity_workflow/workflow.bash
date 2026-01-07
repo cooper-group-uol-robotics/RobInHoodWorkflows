@@ -74,40 +74,39 @@ done
 echo "[INFO] Reading robot state:"
 read_robot_state
 
-
-# for pair in "${SAMPLE_PAIRS[@]}"; do
-#     read_robot_state
-#     readarray -d ' ' sample <<< "$pair"
-#     echo "[INFO] Preparing sample ${sample[0]}"
-#     python $LOCAL_PATH/src/dye_workflow.py "sample_rack_to_ika" $sample[0] $DATASET_PATH
+for pair in "${SAMPLE_PAIRS[@]}"; do
+    read_robot_state
+    readarray -d ' ' sample <<< "$pair"
+    echo "[INFO] Preparing sample ${sample[0]}"
+    python $LOCAL_PATH/src/dye_workflow.py "sample_rack_to_ika" $sample[0] $DATASET_PATH
     
-# done
+done
 
-# echo "[INFO] Reading robot state:"
-# read_robot_state
+echo "[INFO] Reading robot state:"
+read_robot_state
 
-# echo "[INFO] Step 3: Stirring samples."
-# python $LOCAL_PATH/src/dye_workflow.py "stirr_samples" $DATASET_PATH $SPEED $SECS $MINS $HOURS
+echo "[INFO] Step 3: Stirring samples."
+python $LOCAL_PATH/src/dye_workflow.py "stirr_samples" $DATASET_PATH $SPEED $SECS $MINS $HOURS
 
-# echo "[INFO] Reading robot state:"
-# read_robot_state
+echo "[INFO] Reading robot state:"
+read_robot_state
 
-# echo "[INFO] Moving samples to rack."
+echo "[INFO] Moving samples to rack."
     
-# for pair in "${REVERSE[@]}"; do
-#     read_robot_state
-#     readarray -d ' ' sample <<< "$pair"
-#     echo "[INFO] Moving sample ${sample[0]} to the rack"
-#     python $LOCAL_PATH/src/dye_workflow.py "store_sample" $sample[0] $DATASET_PATH
-# done
+for pair in "${REVERSE[@]}"; do
+    read_robot_state
+    readarray -d ' ' sample <<< "$pair"
+    echo "[INFO] Moving sample ${sample[0]} to the rack"
+    python $LOCAL_PATH/src/dye_workflow.py "store_sample" $sample[0] $DATASET_PATH
+done
 
 
-# echo "[INFO] Filtering samples"
-# for pair in "${SAMPLE_PAIRS[@]}"; do
-#     echo "[INFO] Reading robot state:"
-#     read_robot_state
-#     python $LOCAL_PATH/src/dye_workflow.py "filter_sample" $DATASET_PATH $pair $CLEANING_VIAL $CLEANING_SOLVENT
-# done
+echo "[INFO] Filtering samples"
+for pair in "${SAMPLE_PAIRS[@]}"; do
+    echo "[INFO] Reading robot state:"
+    read_robot_state
+    python $LOCAL_PATH/src/dye_workflow.py "filter_sample" $DATASET_PATH $pair $CLEANING_VIAL $CLEANING_SOLVENT
+done
 
 echo "[INFO] Reading robot state:"
 read_robot_state
