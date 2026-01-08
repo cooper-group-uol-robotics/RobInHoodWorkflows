@@ -43,7 +43,7 @@ The .bash scripts launch Python-based workflows implemented using the RobInHoodP
 
 ### Dye-Based Porosity Screening
 
-(Porosity_workflow. Colorimetry_workflow)
+([Porosity_workflow](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/Porosity_workflow), [Colorimetry_workflow](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/Colorimetry_workflow))
 
 Automated high-throughput porosity screening based on dye uptake and colour analysis. Samples are prepared, mixed with dye solutions, filtered, and analysed using computer vision. Porosity is inferred from colour loss across multiple dyes with different molecular sizes.
 
@@ -51,7 +51,7 @@ This workflow runs fully autonomously from sample preparation to imaging and sup
 
 ### CC3 Cage Synthesis
 
-(CC3_synth_workflow)
+([CC3_synth_workflow](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/CC3_synth_workflow))
 
 Automated synthesis and work-up of the porous organic cage CC3. The workflow includes solid and liquid dispensing, long reaction times, antisolvent addition, repeated washing, and filtration.
 
@@ -59,7 +59,7 @@ This case study demonstrates RobInHood’s ability to handle low-solubility reag
 
 ### Phthalimide Synthesis
 
-(Phtalimide_workflow)
+([Phtalimide_workflow](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/Phthalimide_workflow))
 
 Automated synthesis of a functionalised phthalimide via reflux, followed by aqueous work-up and filtration. The workflow includes heating, stirring, decapping, washing, and solid isolation.
 
