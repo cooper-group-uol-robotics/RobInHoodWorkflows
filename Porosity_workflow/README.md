@@ -17,7 +17,7 @@ The workflow consists of three main stages:
 
 2. Filtration and imaging
 
-3. Colour analysis (via the Colorimetry workflow)
+3. Colour analysis (via the [Colorimetry_workflow](https://github.com/cooper-group-uol-robotics/RobInHoodWorkflows/tree/ad86fb82fad053bc43498891f581f58269986caf/Colorimetry_workflow))
 
 ## Workflow Description
 
